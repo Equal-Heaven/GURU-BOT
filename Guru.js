@@ -221,7 +221,7 @@ const connectionOptions = {
     level: 'fatal',
   }),
   printQRInTerminal: !pairingCode,
-  browser: ['chrome (linux)', '', ''],
+  browser: ['chrome (weird-team)', '', ''],
   auth: {
     creds: state.creds,
     keys: makeCacheableSignalKeyStore(
@@ -276,7 +276,7 @@ if (pairingCode && !conn.authState.creds.registered) {
 
     if (!Object.keys(PHONENUMBER_MCC).some(v => phoneNumber.startsWith(v))) {
       console.log(
-        chalk.bgBlack(chalk.redBright("Start with your country's WhatsApp code, Example : 62xxx"))
+        chalk.bgBlack(chalk.redBright("Start with your country's WhatsApp code, Example : 242xxx"))
       )
       process.exit(0)
     }
@@ -288,7 +288,7 @@ if (pairingCode && !conn.authState.creds.registered) {
 
     if (!Object.keys(PHONENUMBER_MCC).some(v => phoneNumber.startsWith(v))) {
       console.log(
-        chalk.bgBlack(chalk.redBright("Start with your country's WhatsApp code, Example : 62xxx"))
+        chalk.bgBlack(chalk.redBright("Start with your country's WhatsApp code, Example : 242xxx"))
       )
 
       phoneNumber = await question(
@@ -374,7 +374,7 @@ async function connectionUpdate(update) {
   if (connection === 'open') {
     const { jid, name } = conn.user
 
-    let msgf = `Hai🤩${name} Congrats you have successfully deployed GURU-BOT\nJoin my support Group for any Query\n https://chat.whatsapp.com/F3sB3pR3tClBvVmlIkqDJp`
+    let msgf = `flm ${name} mais gg tu m'as deployé\nregarde ici\n https://chat.whatsapp.com/Cs3KweAEXyqJxnLVzAKeYR`
 
     let gmes = conn.sendMessage(
       jid,
